@@ -1,13 +1,11 @@
 const body = document.querySelector('body')
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  console.log(request)
   if (request.sentBy === 'background') {
    renderMessages(request.data)
   } else if (request.sentBy === 'popup') {
     const { url, text } = request.data
     document.addEventListener('click', function handler(e) {
-      console.log(e)
       e.currentTarget.removeEventListener(e.type, handler)
 
       const dataObj = {
@@ -20,7 +18,6 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         chrome.storage.sync.get(url, (data)=>{
         
         if (Object.keys(data).length!==0){
-          console.log(data[request.data.url]);
           chrome.storage.sync.set({[url]: [...data[url], dataObj]});
         }
         else {
