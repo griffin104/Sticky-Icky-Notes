@@ -1,7 +1,7 @@
 {
   "name": "Sticky-Icky-Notes!",
   "description": "Save notes on your favorite stackoverflow links so you never forget what the answer is actually saying!",
-  "version": "0.1",
+  "version": "6.6.6",
   "manifest_version": 3,
   "background": {
     "service_worker": "background.js"

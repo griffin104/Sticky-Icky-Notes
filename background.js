@@ -1,4 +1,4 @@
-  let url = 'TEST_URL'
+  let url
 
  chrome.tabs.onActivated.addListener((tabId) => {
   chrome.storage.sync.get(url, (data) => {
