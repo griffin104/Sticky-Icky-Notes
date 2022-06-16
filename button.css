@@ -1,0 +1,57 @@
+h2 {
+  text-align: center;
+}
+
+.container {
+  width: 300px
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+}
+
+#inputField {
+  width: 90%;
+  justify-items: center;
+  height: 100px;
+}
+
+button {
+  width: auto;
+  height: 30px;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+  margin: 10px;
+}
+
+#buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr)
+
+}
+
+button.current {
+  box-shadow: 0 0 0 2px white,
+  0 0 0 4px black;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#addNoteButton {
+  background-color: lightblue;
+}
+
+#clearPage {
+  background-color: #F8FAFC;
+  color: rgba(226, 84, 84, .9);
+  outline: 1px solid rgba(226, 84, 84, .6);;
+
+}
+
+#clearAll {
+  background-color: rgb(226, 84, 84);
+}
